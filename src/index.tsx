@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-type BreakpointPeekProps = {
+type BreakpointIndicatorProps = {
   moreStyle?: React.CSSProperties;
 };
 
@@ -8,7 +8,7 @@ type BreakpointPeekProps = {
  * A component that shows the current breakpoint in the bottom left corner of the screen.
  * It is only visible in development mode.
  */
-function BreakpointPeek({ moreStyle }: BreakpointPeekProps) {
+function BreakpointIndicator({ moreStyle }: BreakpointIndicatorProps) {
   const [width, setWidth] = useState<number>(0);
   if (process.env.NODE_ENV === "production") return null;
 
@@ -65,7 +65,7 @@ function BreakpointPeek({ moreStyle }: BreakpointPeekProps) {
   );
 }
 
-export default BreakpointPeek;
+export default BreakpointIndicator;
 
 const mainStyle: React.CSSProperties = {
   position: "fixed",
