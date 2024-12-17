@@ -1,5 +1,5 @@
 {
-  "name": "react-breakpoint-widget",
+  "name": "react-breakpoint-indicator",
   "version": "1.0.0",
   "description": "A react component widget that shows current width information for frontend developers.",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sonangrai/react-breakpoint-widget.git"
+    "url": "git+https://github.com/sonangrai/react-breakpoint-indicator.git"
   },
   "keywords": [
     "react",
@@ -28,9 +28,9 @@
   "author": "Sonahang Rai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sonangrai/react-breakpoint-widget/issues"
+    "url": "https://github.com/sonangrai/react-breakpoint-indicator/issues"
   },
-  "homepage": "https://github.com/sonangrai/react-breakpoint-widget#readme",
+  "homepage": "https://github.com/sonangrai/react-breakpoint-indicator#readme",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -42,5 +42,8 @@
   },
   "peerDependencies": {
     "react": "^19.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
