@@ -30,9 +30,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-breakpoint-widget@workspace:.":
+"react-breakpoint-indicator@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-breakpoint-widget@workspace:."
+  resolution: "react-breakpoint-indicator@workspace:."
   dependencies:
     "@types/react": ^19.0.1
     "@types/react-dom": ^19.0.2

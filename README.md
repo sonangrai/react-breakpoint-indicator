@@ -13,3 +13,17 @@ or
 ```bash
 yarn add -D react-breakpoint-indicator
 ```
+
+## Usage
+
+Import the component in your project root.
+
+```tsx
+import BreakpointIndicator from "react-breakpoint-indicator";
+
+const App = () => {
+  return <BreakpointIndicator />;
+};
+
+export default App;
+```
