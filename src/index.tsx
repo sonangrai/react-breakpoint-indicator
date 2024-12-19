@@ -10,7 +10,6 @@ type BreakpointIndicatorProps = {
  */
 function BreakpointIndicator({ moreStyle }: BreakpointIndicatorProps) {
   const [width, setWidth] = useState<number>(0);
-  if (process.env.NODE_ENV === "production") return null;
 
   useEffect(() => {
     function handleResize() {
@@ -25,6 +24,8 @@ function BreakpointIndicator({ moreStyle }: BreakpointIndicatorProps) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  if (process.env.NODE_ENV === "production") return null;
 
   function renderString(width: number) {
     let result = "";
