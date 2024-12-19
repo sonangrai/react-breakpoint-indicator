@@ -1,7 +1,7 @@
 {
-  "name": "react-breakpoint-widget",
-  "version": "1.0.0",
-  "description": "A react component widget that shows current width information for frontend developers.",
+  "name": "react-breakpoint-indicator",
+  "version": "1.0.1",
+  "description": "A react component indicator that shows current width information for frontend developers.",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -16,7 +16,7 @@
     "prepare": "husky",
     "format": "prettier .",
     "dev": "vite",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.package.json",
     "build:vite": "tsc -b && vite build",
     "lint": "eslint .",
     "format:fix": "yarn format --write",

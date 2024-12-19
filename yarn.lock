@@ -2953,9 +2953,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-breakpoint-widget@workspace:.":
+"react-breakpoint-indicator@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-breakpoint-widget@workspace:."
+  resolution: "react-breakpoint-indicator@workspace:."
   dependencies:
     "@commitlint/cli": ^19.6.1
     "@commitlint/config-conventional": ^19.6.0
