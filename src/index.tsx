@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import useDragging from "./hooks/useDragging";
 
 type BreakpointIndicatorProps = {
   moreStyle?: React.CSSProperties;
@@ -10,6 +11,7 @@ type BreakpointIndicatorProps = {
  */
 function BreakpointIndicator({ moreStyle }: BreakpointIndicatorProps) {
   const [width, setWidth] = useState<number>(0);
+  const [draggingRef, x, y, isDragging] = useDragging();
 
   useEffect(() => {
     function handleResize() {
@@ -56,10 +58,15 @@ function BreakpointIndicator({ moreStyle }: BreakpointIndicatorProps) {
 
   return (
     <div
+      ref={draggingRef as React.RefObject<HTMLDivElement>}
       style={{
         ...mainStyle,
         ...moreStyle,
+        left: `${x}px`,
+        top: `${y}px`,
+        opacity: isDragging ? "0.5" : "1",
       }}
+      draggable
     >
       {renderString(width)}
     </div>
@@ -70,12 +77,11 @@ export default BreakpointIndicator;
 
 const mainStyle: React.CSSProperties = {
   position: "fixed",
-  bottom: "10px",
-  left: "10px",
   backgroundColor: "#d81d1d",
   color: "#fff",
   padding: "10px",
   borderRadius: "5px",
   fontSize: "12px",
   zIndex: 999,
+  cursor: "move",
 };
