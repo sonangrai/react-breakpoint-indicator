@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-function useDragging() {
+function useDragging(ref: React.RefObject<HTMLDivElement>) {
   const [isDragging, setIsDragging] = useState(false);
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-  const ref = useRef(null);
+  const [pos, setPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   function onMouseMove(e: MouseEvent) {
     if (!isDragging) return;
@@ -64,7 +63,7 @@ function useDragging() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDragging]);
 
-  return [ref, pos.x, pos.y, isDragging];
+  return { pos, isDragging };
 }
 
 export default useDragging;
