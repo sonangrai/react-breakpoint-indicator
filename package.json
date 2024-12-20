@@ -1,6 +1,6 @@
 {
   "name": "react-breakpoint-indicator",
-  "version": "1.0.2",
+  "version": "1.0.21",
   "description": "A react component indicator that shows current width information for frontend developers.",
   "main": "dist/index.js",
   "files": [
