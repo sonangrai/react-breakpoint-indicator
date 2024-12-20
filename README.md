@@ -1,6 +1,16 @@
 # React Breakpoint Indicator
 
-A react component widget that shows current width information for frontend developers.
+A react component widget that shows current width information for frontend developers. The initial position is top-left, but it can be dragged and it will reposition to either top-right, bottom-left, or bottom-right.
+
+![react-breakpoint-indicator](https://github.com/sonangrai/react-breakpoint-indicator/blob/main/public/info.png)
+
+The default breakpoints are:
+
+- SM: <= 640px
+- MD: <= 768px
+- LG: <= 1024px
+- XL: <= 1280px
+- 2XL: > 1280px
 
 ## Installation
 
