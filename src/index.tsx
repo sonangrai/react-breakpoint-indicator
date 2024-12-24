@@ -3,13 +3,17 @@ import useDragging from "./hooks/useDragging";
 
 type BreakpointIndicatorProps = {
   moreStyle?: React.CSSProperties;
+  disableDev?: boolean;
 };
 
 /**
  * A component that shows the current breakpoint in the bottom left corner of the screen.
  * It is only visible in development mode.
  */
-function BreakpointIndicator({ moreStyle }: BreakpointIndicatorProps) {
+function BreakpointIndicator({
+  moreStyle,
+  disableDev = false,
+}: BreakpointIndicatorProps) {
   const [width, setWidth] = useState<number>(0);
   const draggingRef = useRef<HTMLDivElement>(null);
   const { pos, isDragging } = useDragging(draggingRef);
@@ -97,7 +101,7 @@ function BreakpointIndicator({ moreStyle }: BreakpointIndicatorProps) {
     return result;
   }, []);
 
-  if (process.env.NODE_ENV === "production") return null;
+  if (!disableDev && process.env.NODE_ENV === "production") return null;
 
   return (
     <div
@@ -121,11 +125,10 @@ function BreakpointIndicator({ moreStyle }: BreakpointIndicatorProps) {
 export default BreakpointIndicator;
 
 const mainStyle: React.CSSProperties = {
-  position: "fixed",
+  position: "absolute",
   backgroundColor: "rgb(179 21 116)",
   color: "#fff",
   padding: "10px",
-  borderRadius: "5px",
   fontSize: "12px",
   zIndex: 999,
   cursor: "move",

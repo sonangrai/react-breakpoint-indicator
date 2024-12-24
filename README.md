@@ -37,3 +37,8 @@ const App = () => {
 
 export default App;
 ```
+
+## Props
+
+- `moreStyle`: Custom CSS styles for the component.
+- `disableDev`: Disable the component in development mode check. Enabling this will make component work on production as well.
